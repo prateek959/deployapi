@@ -53,10 +53,13 @@ const server = app.listen(
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
-    origin: 'http://localhost:5173',
-    credentials: true,
+    origin: '*',  // Allow all origins
+    methods: ['GET', 'POST'],  // Allow GET and POST methods
+    allowedHeaders: ['Content-Type', 'Authorization'],  // Allow headers (if needed)
+    credentials: true,  // Allow credentials (cookies, tokens)
   },
 });
+
 
 io.on("connection", (socket) => {
   console.log("Connected to socket.io");
