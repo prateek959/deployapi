@@ -12,7 +12,7 @@ dotenv.config();
 connectDB();
 const app = express();
 
-// Use CORS middleware to allow all origins
+// Use cors middleware to allow all origins
 app.use(cors());
 
 // Middleware to parse JSON data
