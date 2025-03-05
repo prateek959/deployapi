@@ -15,7 +15,7 @@ const app = express();
 // Use cors middleware to allow all origin
 // app.use(cors());
 app.use(cors({
-    origin: "https://construct-week-project-mocha.vercel.app",
+    origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true
